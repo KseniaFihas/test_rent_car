@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: 'Manrope',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+    padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.divider::before {
+  content: "|";
+  /* Текст або символ роздільника */
+  margin: 0 0.5rem;
+  /* Простір навколо роздільника */
+  color:rgba(18, 20, 23, 0.50);
+  /* Колір роздільника */
+}

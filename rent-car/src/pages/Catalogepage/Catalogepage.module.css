@@ -1,0 +1,44 @@
+.load {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    /* Встановлюємо flex-контейнер */
+    justify-content: center;
+    /* Центруємо дітей по горизонталі */
+    align-items: center;
+    /* Центруємо дітей по вертикалі */
+}
+
+.more {
+    color: #3470FF;
+    font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5;
+        /* 150% */
+        text-decoration-line: underline;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more:hover {
+    background-color: #0056b3;
+}
+
+.more.active {
+    background-color: #003c80;
+}
+
+.container {
+    padding-left: 115px;
+    padding-right: 115px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100vh;
+}
