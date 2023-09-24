@@ -4,6 +4,9 @@ import Listing from './Listing';
 import css from './Catalogepage.module.css';
 
 function Catalogepage() {
+
+
+  
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -36,6 +39,9 @@ function Catalogepage() {
   const loadMore = () => {
     setPage((prevPage) => prevPage + 1);
   };
+
+
+
 
   return (
     <div>
