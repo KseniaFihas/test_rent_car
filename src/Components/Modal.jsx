@@ -27,7 +27,15 @@ const Modal = ({ isOpen, onClose, children, car }) => {
     type,
     mileage,
     functionalities,
+    description,
+    accessories,
+    rentalConditions,
   } = car;
+
+const accessoriesString = accessories.join(" | ");
+  const functionalitiesString = functionalities.join(" | ");
+
+
 
   const firstFunctionality =
     functionalities && functionalities.length > 0 ? functionalities[0] : '';
@@ -54,6 +62,8 @@ const Modal = ({ isOpen, onClose, children, car }) => {
 
   if (!isOpen) return null;
 
+
+
   return (
     <div className={css.modal_overlay} onClick={handleBackdropClick}>
       <div className={css.modal}>
@@ -67,16 +77,18 @@ const Modal = ({ isOpen, onClose, children, car }) => {
           <h2 className={css.modal_h2}>{`${make} ${model}, ${year}`}</h2>
         </div>
         <div className={css.about}>
-          <p style={{ whiteSpace: 'nowrap' }}>{`${city} ${country}`}</p>
-          <p className="divider" style={{ whiteSpace: 'nowrap' }}>
-            {rentalCompany}
-          </p>
-          <p className="divider">{type}</p>
-          <p className="divider">{model}</p>
-          <p className="divider">{mileage}</p>
-          <p className="divider">{firstFunctionality}</p>
+          <p style={{ whiteSpace: 'nowrap' }}>{`${city} | ${country}`}</p>
+         <p>{`${city} | ${rentalCompany} | ${type} | ${model} | ${mileage} | ${firstFunctionality}`}</p>
+          <p className={css.description}>{description}</p>
+          <h3 className={css.h3}>Accessories and functionalities:</h3>
+          <p>{accessoriesString}</p>
+          <p>{functionalitiesString}</p>
+          <h3 className={css.h3}>Rental Conditions:</h3>
+          <p>{rentalConditions}</p>
+            
         </div>
         {children}
+         <button className={css.rental} type='button'>Rental car</button>
       </div>
     </div>
   );
