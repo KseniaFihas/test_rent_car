@@ -30,6 +30,7 @@ const Modal = ({ isOpen, onClose, children, car }) => {
     description,
     accessories,
     rentalConditions,
+    rentalPrice,
   } = car;
 
 const accessoriesString = accessories.join(" | ");
@@ -83,9 +84,31 @@ const accessoriesString = accessories.join(" | ");
           <h3 className={css.h3}>Accessories and functionalities:</h3>
           <p>{accessoriesString}</p>
           <p>{functionalitiesString}</p>
-          <h3 className={css.h3}>Rental Conditions:</h3>
-          <p>{rentalConditions}</p>
-            
+<div className={css.rental_conditions}>
+  <div className={css.rental_conditions_heading}>
+    <h3 className={css.h3}>Rental Conditions:</h3>
+  </div>
+  <div className={css.rental_conditions_list}>
+    {rentalConditions.split('\n').slice(0, 2).map((condition, index) => (
+      <div key={index} className={css.rental_condition}>
+        {condition}
+      </div>
+    ))}
+  </div>
+  <div className={css.rental_conditions_list}>
+    {rentalConditions.split('\n').slice(2).map((condition, index) => (
+      <div key={index} className={css.rental_condition}>
+        {condition}
+      </div>
+    ))}
+ <div className={css.rental_condition}>
+  Mileage: <span className={css.blue_text}>{mileage}</span>
+</div>
+<div className={css.rental_condition}>
+  Price: <span className={css.blue_text}>{rentalPrice}</span>
+</div>
+  </div>
+</div>
         </div>
         {children}
          <button className={css.rental} type='button'>Rental car</button>

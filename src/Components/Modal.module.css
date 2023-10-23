@@ -118,5 +118,51 @@
             line-height: 1.42;
             position: absolute;
                 bottom: 40px;
+                margin-top: 24px;
         
+}
+.rental_conditions {
+    display: flex;
+    flex-direction: column;
+    color: #363535;
+    flex-wrap: wrap;
+    
+}
+
+.rental_conditions_heading {
+    white-space: nowrap;
+}
+
+.rental_conditions_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.rental_condition {
+    display: flex;
+    padding: 7px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 35px;
+    background: #F9F9F9;
+    color: #363535;
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.blue_text {
+    color: #3470FF;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.24px;
+    
 }
