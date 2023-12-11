@@ -2,6 +2,7 @@ import React from 'react';
 import css from './Listing.module.css';
 import Modal from '../../Components/Modal';
 import { useState } from 'react';
+import icon from '../../Components/SVG/symbol-defs.svg';
 
 const Listing = ({ car }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,6 +41,13 @@ const Listing = ({ car }) => {
 
   return (
     <div className={css.card}>
+      <div className={css.heartButtonContainer}>
+  <button className={css.favoriteButton}>
+    <svg width={24} height={24} fill="white">
+      <use href={icon + '#icon-icon-heart'}></use>
+    </svg>
+  </button>
+</div>
       <div>
         {hasValidImage ? (
           <img src={img} alt={`${make} ${model}`} className={css.card_img} />

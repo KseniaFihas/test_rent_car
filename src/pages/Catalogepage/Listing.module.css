@@ -121,3 +121,29 @@ text-align: justify;
     margin-top: 16px;
     
 }
+
+.heartButtonContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 2;
+}
+
+.favoriteButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.favoriteButton svg {
+    width: 24px;
+    height: 24px;
+    fill:#fff;
+    stroke: #fff;
+}

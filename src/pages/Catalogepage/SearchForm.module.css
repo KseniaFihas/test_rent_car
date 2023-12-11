@@ -1,0 +1,32 @@
+.searchButton{
+    display: flex;
+        width: 136px;
+        height: 48px;
+        padding: 14px 44px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 12px;
+            background: #3470FF;
+            color: #FFF;
+                font-family: Manrope;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    
+}
+
+.formLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
